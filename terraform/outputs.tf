@@ -12,3 +12,15 @@ output "route53_zone_id" {
     description = "The ID of the Route 53 Zone"
     value = data.aws_route53_zone.dns_zone.zone_id
 }
+
+
+output "s3_bucket_id" {
+    description = "the ID of the S3 Bucket"
+    value = aws_s3_bucket.website_bucket.id
+}
+
+output "s3_bucket_arn" {
+    description = "the ARN of the S3 Bucket"
+    value = aws_s3_bucket.website_bucket.arn
+}
+

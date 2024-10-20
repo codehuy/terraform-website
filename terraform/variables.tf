@@ -23,9 +23,19 @@ variable "dns_record_ttl" {
 }
 
 
-
-
 # S3 bucket variables
-variable "bucket_name" {
+variable "website_bucket" {
   default = "huytran-website-bucket"
+}
+
+variable "force_destroy" {
+  default = false
+}
+
+variable "versioning_enabled" {
+  default = "Enabled"
+}
+
+variable "index_document" {
+  default = "index.html"
 }
