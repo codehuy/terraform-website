@@ -13,6 +13,18 @@ variable "terraform_iam_user_name" {
 
 
 
+# route53 variables
+variable "root_domain" {
+  default = "huy-tran.com"
+}
+
+variable "dns_record_ttl" {
+  default = 300 
+}
+
+
+
+
 # S3 bucket variables
 variable "bucket_name" {
   default = "huytran-website-bucket"
