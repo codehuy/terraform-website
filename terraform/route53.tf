@@ -16,9 +16,10 @@ resource "aws_acm_certificate" "ssl_certificate" {
 
 # Create a DNS record in Route 53 to validate the ACM certificate
 resource "aws_route53_record" "dns_validation" {
-  name    = aws_acm_certificate.ssl_certificate.domain_validation_options[0].resource_record_name
-  records = [aws_acm_certificate.ssl_certificate.domain_validation_options[0].resource_record_value]
-  type    = aws_acm_certificate.ssl_certificate.domain_validation_options[0].resource_record_type
+  allow_overwrite = true
+  name    = tolist(aws_acm_certificate.ssl_certificate.domain_validation_options)[0].resource_record_name
+  records = [tolist(aws_acm_certificate.ssl_certificate.domain_validation_options)[0].resource_record_value]
+  type    = tolist(aws_acm_certificate.ssl_certificate.domain_validation_options)[0].resource_record_type
   zone_id = data.aws_route53_zone.dns_zone.zone_id
   ttl     = 300
 }
