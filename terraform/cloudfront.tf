@@ -13,7 +13,7 @@ resource "aws_cloudfront_distribution" "website_distribution" {
     aliases = [var.root_domain]
     
     origin {
-        domain_name = var.bucket_regional_domain_name
+        domain_name = "${var.website_bucket}.s3.us-east-1.amazonaws.com"
         origin_id = "S3-${var.s3_bucket_id}"
         origin_access_control_id = aws_cloudfront_origin_access_control.cloudfront_s3_oac.id
     }
