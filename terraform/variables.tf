@@ -43,11 +43,8 @@ variable "index_document" {
 variable "s3_bucket_id" {
 }
 
-variable "bucket_regional_domain_name" {
-}
+variable "bucket_regional_domain_name" {}
 
-variable "ssl_cert_arn" {
-}
+variable "ssl_cert_arn" {}
 
-variable "route53_zone_id" {
-}
+variable "route53_zone_id" {}
