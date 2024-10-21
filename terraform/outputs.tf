@@ -24,11 +24,11 @@ output "s3_bucket_id" {
 }
 
 output "s3_bucket_arn" {
-    description = "the ARN of the S3 Bucket"
+    description = "the arn of the S3 Bucket"
     value = aws_s3_bucket.website_bucket.arn
 }
 
 output "cloudfront_distribution_id" {
-    description = "The ID of the cloudfront distribution"
+    description = "The id of the cloudfront distro"
     value = aws_cloudfront_distribution.website_distribution.id
 }
