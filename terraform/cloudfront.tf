@@ -75,7 +75,7 @@ resource "aws_s3_bucket_policy" "cloudfront_oac_policy" {
 }
 
 resource "aws_route53_record" "website_alias_record" {
-    zone_id = data.aws_route53_zone.dns_zone.zone_id
+    zone_id = data.aws_route53_zone.dns_zone.zone_id # The hosted zone where the DNS record will be created
     name    = var.root_domain
     type    = "A"
 
