@@ -77,3 +77,4 @@ resource "aws_route53_record" "website_alias_record" {
     }
 }
  
+ 
