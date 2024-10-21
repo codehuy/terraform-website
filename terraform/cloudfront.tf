@@ -66,7 +66,7 @@ resource "aws_s3_bucket_policy" "cloudfront_oac_policy" {
 }
 
 resource "aws_route53_record" "website_alias_record" {
-    zone_id = var.route53_zone_id
+    zone_id = data.aws_route53_zone.dns_zone.zone_id
     name    = var.root_domain
     type    = "A"
 
