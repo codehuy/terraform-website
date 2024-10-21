@@ -41,6 +41,5 @@ variable "index_document" {
 
 # cloudfront variables
 variable "s3_bucket_id" {
+  default = "huytran-website-bucket"
 }
-
-variable "ssl_cert_arn" {}
