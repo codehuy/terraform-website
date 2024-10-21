@@ -57,7 +57,7 @@ resource "aws_s3_bucket_policy" "cloudfront_oac_policy" {
         Resource = "arn:aws:s3:::${var.s3_bucket_id}/*"
         Condition = {
           StringEquals = {
-            "AWS:SourceArn" = aws_cloudfront_distribution.website_bucket.arn
+            "AWS:SourceArn" = aws_cloudfront_distribution.website_distribution.arn
           }
         }
       }
