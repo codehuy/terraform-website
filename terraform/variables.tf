@@ -44,5 +44,3 @@ variable "s3_bucket_id" {
 }
 
 variable "ssl_cert_arn" {}
-
-variable "route53_zone_id" {}
