@@ -12,7 +12,6 @@ variable "terraform_iam_user_name" {
 }
 
 
-
 # route53 variables
 variable "root_domain" {
   default = "huy-tran.com"
@@ -38,4 +37,17 @@ variable "versioning_enabled" {
 
 variable "index_document" {
   default = "index.html"
+}
+
+# cloudfront variables
+variable "s3_bucket_id" {
+}
+
+variable "bucket_regional_domain_name" {
+}
+
+variable "ssl_cert_arn" {
+}
+
+variable "route53_zone_id" {
 }

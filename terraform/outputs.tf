@@ -13,6 +13,10 @@ output "route53_zone_id" {
     value = data.aws_route53_zone.dns_zone.zone_id
 }
 
+output "bucket_regional_domain_name" {
+    description = "The regional domain name of the S3 bucket"
+    value = aws_s3_bucket.website_bucket.bucket_regional_domain_name
+}
 
 output "s3_bucket_id" {
     description = "the ID of the S3 Bucket"
@@ -24,3 +28,7 @@ output "s3_bucket_arn" {
     value = aws_s3_bucket.website_bucket.arn
 }
 
+output "cloudfront_distribution_id" {
+    description = "The ID of the cloudfront distribution"
+    value = aws_cloudfront_distribution.website_distribution.id
+}
