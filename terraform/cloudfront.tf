@@ -1,9 +1,9 @@
 
-# Fetch the ACM certificate ARN dynamically based on the domain name
+#Fetch the ACM certificate ARN dynamically based on the domain name
 data "aws_acm_certificate" "ssl_cert" {
-  domain   = var.root_domain               # The domain name associated with the certificate
-  statuses = ["ISSUED"]                    # Only fetch issued certificates
-  most_recent = true                       # Fetch the most recent if there are multiple
+  domain   = var.root_domain               
+  statuses = ["ISSUED"]                    
+  most_recent = true                      
 }
 
 resource "aws_cloudfront_origin_access_control" "cloudfront_s3_oac" {
