@@ -21,7 +21,7 @@ const counter = document.querySelector(".counter-number");
 async function viewCounter() {
   try {
     // Reference to lambda URL (ensure it starts with https://)
-    let response = await fetch("https://MY_LAMBDAFUNCTION.lambda-url.us-east-1.on.aws/");
+    let response = await fetch("https://t6ywcw3mt4pbfs5q4aluayn3xy0kqfpe.lambda-url.us-east-1.on.aws/");
     let data = await response.json();
     
     // Update counter with view count from data
