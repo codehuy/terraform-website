@@ -30,4 +30,3 @@ resource "aws_acm_certificate_validation" "ssl_validation" {
   validation_record_fqdns = [aws_route53_record.dns_validation.fqdn]
 }
 
-#testing 

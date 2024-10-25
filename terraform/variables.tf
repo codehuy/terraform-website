@@ -43,3 +43,7 @@ variable "index_document" {
 variable "s3_bucket_id" {
   default = "huytran-website-bucket"
 }
+
+variable "aws_region" {
+  default = "us-east-1"
+}
