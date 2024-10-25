@@ -84,8 +84,8 @@ resource "aws_lambda_function" "view_counter_lambda" {
 # Archive Lambda Python Code (local packaging)
 data "archive_file" "lambda_zip" {
   type        = "zip"
-  source_file = "${path.module}/lambda/view_counter.py"  # Ensure this path matches your local code
-  output_path = "${path.module}/lambda/view_counter.zip"
+  source_file = "${path.module}/lambda/lambda_function.py"  # Ensure this path matches your local code
+  output_path = "${path.module}/lambda/lambda_Function.zip"
 }
 
 # Lambda Function URL to invoke the Lambda function
