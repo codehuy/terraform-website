@@ -9,11 +9,6 @@ resource "aws_dynamodb_table" "resume_views" {
     name = "id"
     type = "S"
   }
-
-  # Optional: Add an initial item with id '1' and views '1'
-  lifecycle {
-    ignore_changes = [item]  # This avoids Terraform trying to manage the table contents
-  }
 }
 
 # Lambda Execution Role
