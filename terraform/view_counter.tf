@@ -1,7 +1,3 @@
-# AWS Provider
-provider "aws" {
-  region = "us-east-1"  # Change this as needed
-}
 
 # DynamoDB Table for View Count
 resource "aws_dynamodb_table" "resume_views" {
