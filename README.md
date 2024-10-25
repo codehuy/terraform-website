@@ -27,7 +27,7 @@ Technologies and Why I Chose Them
 
 	•	Terraform: Provides Infrastructure as Code (IaC) capabilities, making deployment reproducible and manageable.
 	•	GitHub Actions: Ensures continuous delivery of infrastructure changes by automatically applying any updates made to the Terraform configuration.
-	•	AWS Services (S3, Route 53, CloudFront, DynamoDB, Lambda, API Gateway): These services integrate well to support a serverless architecture, minimizing costs and complexity.
+	•	AWS Services (S3, Route 53, CloudFront, DynamoDB, Lambda): These services integrate well to support a serverless architecture, minimizing costs and complexity.
 
 Building and Automating the Project
 
@@ -39,7 +39,7 @@ Challenge: Configuring HTTPS correctly required adding CloudFront, which manages
 
 2. View Counter with DynamoDB and Lambda
 
-To make the site interactive, I implemented a view counter that stores page visits in a DynamoDB table. Each visit triggers a Lambda function, which updates the counter.
+To make the site interactive, I implemented a view counter that stores page visits in a DynamoDB table. Each visit triggers the Lambda function, which updates the counter.
 
 Challenge: Setting up Lambda was initially challenging but essential for allowing the frontend to interact with the Lambda function securely.
 
